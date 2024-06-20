@@ -1,0 +1,12 @@
+[files]
+include = ["*.py"]
+exclude = ["build/", "dist/", ".egg-info/", ".venv/"]
+
+[lint]
+enable = true
+
+[format]
+enable = true
+
+[check]
+enable = true
