@@ -1,7 +1,8 @@
+import aws_cdk as cdk
 from aws_cdk import (
     # Duration,
     Stack,
-    # aws_sqs as sqs,
+    aws_s3 as s3
 )
 from constructs import Construct
 
@@ -12,10 +13,10 @@ class TodoCdkStack(Stack):
 
         # The code that defines your stack goes here
 
-        # example resource
-        # queue = sqs.Queue(
-        #     self, "TodoCdkQueue",
-        #     visibility_timeout=Duration.seconds(300),
-        # )
+        bucket = s3.Bucket(self, "TaskBucket",
+            versioned=True,
+            removal_policy=cdk.RemovalPolicy.DESTROY
+            )
+
 
 
