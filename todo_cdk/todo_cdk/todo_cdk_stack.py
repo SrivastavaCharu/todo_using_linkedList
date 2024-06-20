@@ -2,7 +2,8 @@ import aws_cdk as cdk
 from aws_cdk import (
     # Duration,
     Stack,
-    aws_s3 as s3
+    aws_s3 as s3,
+    aws_sns as sns
 )
 from constructs import Construct
 
@@ -17,6 +18,9 @@ class TodoCdkStack(Stack):
             versioned=True,
             removal_policy=cdk.RemovalPolicy.DESTROY
             )
+        
+        topic = sns.Topic(self, "TaskTopic",
+                          display_name="My ToDo Task Topic")
 
 
 
