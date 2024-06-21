@@ -5,6 +5,8 @@ __pycache__
 .venv
 *.egg-info
 
+
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+/Users/charu/todo_using_linkedList/.venv
