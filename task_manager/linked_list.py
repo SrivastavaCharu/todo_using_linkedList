@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -12,14 +13,14 @@ class LinkedList:
         new_node.next = self.head
         self.head = new_node
 
-    def view_task(self):
+    def view_tasks(self):
         current = self.head
         tasks = []
         while current:
             tasks.append(current.data)
             current = current.next
         return tasks
-    
+
     def complete_task(self, task):
         current = self.head
         prev = None
@@ -27,7 +28,7 @@ class LinkedList:
             prev = current
             current = current.next
         if current:
-            if prev: 
+            if prev:
                 prev.next = current.next
             else:
                 self.head = current.next

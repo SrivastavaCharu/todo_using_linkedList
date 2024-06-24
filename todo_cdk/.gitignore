@@ -10,3 +10,9 @@ __pycache__
 .cdk.staging
 cdk.out
 /Users/charu/todo_using_linkedList/.venv
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.pre-commit-config.yaml
