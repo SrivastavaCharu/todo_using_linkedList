@@ -15,8 +15,8 @@ class TodoCdkStack(Stack):
 
         # The code that defines your stack goes here
 
-        bucket = s3.Bucket(
+        s3.Bucket(
             self, "TaskBucket", versioned=True, removal_policy=cdk.RemovalPolicy.DESTROY
         )
 
-        topic = sns.Topic(self, "TaskTopic", display_name="My ToDo Task Topic")
+        sns.Topic(self, "TaskTopic", display_name="My ToDo Task Topic")
