@@ -27,34 +27,40 @@ git clone <repo-url>
 python -m venv .venv
 source .venv/bin/activate
 ```
-This creates a virtual environment for project dependencies. A virtual environment is a tool that helps to keep dependencies required by different projects separate by creating isolated Python virtual environments for them. Before you can start installing or using packages in your virtual environment you'll need to activate it.
 
-3. Install dependencies
+3. Install the dependencies by:
 ```sh
 pip install -r requirements.txt
 ```
-This installs the necessary Python packages defined in [`requirements.txt`]
 
-4. Run the project
+4. Run the project using the following command:
 ```sh
 python main.py
 ```
-This starts the application.
 
-5. Run formatter
+5. Run formatter:
 ```sh
 black --check .
 ```
-This checks the code format using `black`, ensuring consistency.
 
-6. Run linter
+6. Run linter:
 ```sh
 flake8 .
 ```
-Runs `flake8` to identify any stylistic or logical errors in the code.
 
-7. To get out of the virtual environment
+7. Run the following command to exit the virtual environment:
 ```sh
 deactivate
 ```
-This command deactivates the virtual environment. 
+
+## Running
+
+You need to pass your ToDo tasks in [`main.py`] file, through `add_task()` function as shown below,
+```sh
+manager.add_task("YOUR TASK")
+```
+
+Once completed, you need to pass your completed tasks through this function,
+```sh
+manager.complete_task("Brush")
+```
