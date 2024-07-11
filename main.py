@@ -1,14 +1,15 @@
+import os
 from task_manager.manage_task import TaskManager
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def main():
-    print("Entered main")
     try:
-        bucket_name = "todocdkstack-taskbucketfec5f2d0-sfypu5ca2fq2"
-        sns_topic_arn = (
-            "arn:aws:sns:ap-northeast-1:392575048301:TodoCdkStack-"
-            "TaskTopic85B90E1D-qNJKMFMVS4P0"
-        )
+        bucket_name = os.getenv("BUCKET_NAME")
+        sns_topic_arn = os.getenv("SNS_TOPIC_ARN")
+        print(sns_topic_arn, bucket_name)
         manager = TaskManager(bucket_name, sns_topic_arn)
         manager.add_task("Brush")
         manager.add_task("Bath")
