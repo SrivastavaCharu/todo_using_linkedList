@@ -11,4 +11,5 @@ exclude =
     ./todo_cdk/.venv/lib/python3.9/site-packages/*,
     ./todo_cdk/.venv/lib/python3.12/site-packages/pip,
     ./todo_cdk/tests/,
-    todo_cdk/app.py
+    todo_cdk/app.py,
+    task_manager/.venv
